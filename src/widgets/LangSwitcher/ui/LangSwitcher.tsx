@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './LangSwitcher.module.scss'
 import { useTranslation } from 'react-i18next'
 import LangIconLight from 'shared/assets/icons/language/lang-light.svg'
 import LangIconDark from 'shared/assets/icons/language/lang-dark.svg'
@@ -21,7 +20,7 @@ export const LangSwitcher = ({ className, }: LangSwitcherProps) => {
       <Button
         theme={ThemeButton.CLEAR}
         onClick={toggleLanguage}
-        className={classNames(cls.ThemeSwitcher, {}, [className])}
+        className={classNames('', {}, [className])}
         title={t('language')}
         >
           {theme === Theme.DARK ? <LangIconLight /> : <LangIconDark />}
