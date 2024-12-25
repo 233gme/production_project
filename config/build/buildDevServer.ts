@@ -1,9 +1,10 @@
 import type {Configuration} from "webpack-dev-server";
 
-export function buildDevServer(port: number): Configuration {
+export function buildDevServer (port: number): Configuration {
 
 	return {
 		port,
-		open: false
-	}
+		open: false,
+		historyApiFallback: true,
+	};
 }
