@@ -5,8 +5,8 @@ import {buildResolvers} from "./buildResolvers";
 import {buildPlugins} from "./buildPlugins";
 import {buildDevServer} from "./buildDevServer";
 
-export function buildWebpackConfig(options: BuildOptions): Configuration {
-	const {mode, paths, port, isDev} = options
+export function buildWebpackConfig (options: BuildOptions): Configuration {
+	const {mode, paths, port, isDev} = options;
 
 	return {
 		mode,
@@ -14,14 +14,14 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
 		output: {
 			path: paths.build,
 			filename: '[name].[contenthash].js',
-			clean: true
+			clean: true,
 		},
 		module: {
 			rules: buildLoaders(isDev),
 		},
-		resolve: buildResolvers(),
+		resolve: buildResolvers(paths.src),
 		plugins: buildPlugins(paths.html),
 		devtool: isDev ? 'inline-source-map' : undefined,
-		devServer: isDev ? buildDevServer(port) : undefined
+		devServer: isDev ? buildDevServer(port) : undefined,
 	};
 }
