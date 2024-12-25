@@ -1,6 +1,6 @@
 import path from 'path';
-import type {Configuration} from 'webpack';
 import {buildWebpackConfig} from "./config/build/buildWebpackConfig";
+import type {Configuration} from 'webpack';
 import type {BuildEnv} from "./config/build/types/config";
 
 export default (env: BuildEnv): Configuration => {
@@ -8,7 +8,6 @@ export default (env: BuildEnv): Configuration => {
 		entry: path.resolve(__dirname, 'src', 'index.tsx'),
 		build: path.resolve(__dirname, 'dist'),
 		html: path.resolve(__dirname, 'public', 'index.html'),
-		src: path.resolve(__dirname, 'src'),
 	}
 
 	const mode = env.mode || 'development'

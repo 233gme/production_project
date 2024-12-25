@@ -1,10 +1,6 @@
 import ReactDOM from 'react-dom/client';
-import {Counter} from "./components";
+import App from "./App";
 
 let root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-root.render(
-	<div>
-		<Counter/>
-	</div>,
-);
+root.render(<App />);

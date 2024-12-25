@@ -7,5 +7,3 @@ export function buildDevServer(port: number): Configuration {
 		open: false
 	}
 }
-
-export default buildDevServer;
