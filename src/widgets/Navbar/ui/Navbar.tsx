@@ -1,18 +1,17 @@
 import {FC} from "react";
-import {useTheme} from "app/providers";
 import cls from "./Navbar.module.scss";
 import {AppLink, AppLinkTheme, classNames} from "shared";
+import {ThemeSwitcher} from "widgets";
 
 interface Props {
 	className?: string;
 }
 
 export const Navbar: FC<Props> = ({className}) => {
-	const {toggleTheme} = useTheme();
 
 	return (
 		<header className={classNames(cls.header, {}, [className])}>
-			<button onClick={toggleTheme}>Toggle theme</button>
+			<ThemeSwitcher/>
 
 			<nav className={cls.nav}>
 				<AppLink theme={AppLinkTheme.SECONDARY} to="/">Main</AppLink>
