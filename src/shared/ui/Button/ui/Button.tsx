@@ -6,7 +6,7 @@ export enum ButtonVariant {
 	CLEAR = 'clear',
 	CLEAR_ICON = 'clear-icon',
 	OUTLINE = 'outline',
-};
+}
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: ButtonVariant;
