@@ -1,12 +1,12 @@
-import {FC} from "react";
-import cls from "./Navbar.module.scss";
-import {AppLink, AppLinkTheme, classNames} from "shared";
+import { FC } from 'react';
+import cls from './Navbar.module.scss';
+import { AppLink, AppLinkTheme, classNames } from 'shared';
 
 interface Props {
 	className?: string;
 }
 
-export const Navbar: FC<Props> = ({className}) => {
+export const Navbar: FC<Props> = ({ className }) => {
 
 	return (
 		<header className={classNames(cls.wrapper, {}, [className])}>

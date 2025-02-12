@@ -1,1 +1,1 @@
-export {Sitebar} from './Sitebar';
+export { Sitebar } from './Sitebar';

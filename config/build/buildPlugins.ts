@@ -1,7 +1,7 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import type {WebpackPluginInstance} from "webpack";
-import {DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin} from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import type { WebpackPluginInstance } from 'webpack';
+import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins (templePath: string, isDev: boolean): WebpackPluginInstance[] {

@@ -1,6 +1,6 @@
-import {Route, Routes} from "react-router-dom";
-import {Suspense} from "react";
-import {ROUTE_CONFIG} from "shared/config";
+import { Route, Routes } from 'react-router-dom';
+import { Suspense } from 'react';
+import { ROUTE_CONFIG } from 'shared/config';
 
 export const AppRouter = () => {
 	return (
@@ -8,7 +8,7 @@ export const AppRouter = () => {
 			<div className="page-wrapper">
 				<Routes>
 					{
-						ROUTE_CONFIG.map(({path, element}) => <Route key={path} path={path} element={element}/>)
+						ROUTE_CONFIG.map(({ path, element }) => <Route key={path} path={path} element={element}/>)
 					}
 				</Routes>
 			</div>

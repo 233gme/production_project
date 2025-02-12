@@ -1,1 +1,1 @@
-export {ROUTE_CONFIG} from "./routeConfig";
+export { ROUTE_CONFIG } from './routeConfig';
