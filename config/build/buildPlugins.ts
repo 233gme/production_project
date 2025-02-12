@@ -1,18 +1,21 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import {ProgressPlugin} from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import type {WebpackPluginInstance} from "webpack";
+import {DefinePlugin, ProgressPlugin} from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-export function buildPlugins(templePath: string): WebpackPluginInstance[] {
+export function buildPlugins (templePath: string, isDev: boolean): WebpackPluginInstance[] {
 
 	return [
 		new HtmlWebpackPlugin({
-			template: templePath
+			template: templePath,
 		}),
 		new ProgressPlugin(),
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].[contenthash:8].css',
-			chunkFilename: 'css/[name].[contenthash:8].css'
-		})
-	]
+			chunkFilename: 'css/[name].[contenthash:8].css',
+		}),
+		new DefinePlugin({
+			__IS_DEV__: JSON.stringify(isDev),
+		}),
+	];
 }

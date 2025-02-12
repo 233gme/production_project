@@ -18,6 +18,7 @@
 .clear-icon {
 	@extend .clear;
 	border: 1px solid var(--inverted-primary-color);
+	color: var(--inverted-primary-color);
 }
 
 .clear-icon > svg {

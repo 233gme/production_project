@@ -1,7 +1,7 @@
 import {FC, useState} from "react";
 import cls from './Sitebar.module.scss';
 import {classNames} from "shared";
-import {ThemeSwitcher} from "widgets";
+import {LanguageSwitcher, ThemeSwitcher} from "widgets";
 
 type Props = {
 	className?: string
@@ -20,6 +20,7 @@ export const Sitebar: FC<Props> = ({className}) => {
 
 			<div className={cls.footer}>
 				<ThemeSwitcher/>
+				<LanguageSwitcher/>
 			</div>
 		</div>
 	);
