@@ -9,14 +9,15 @@
 	}
 }
 
-.clear {
+%clear {
 	padding: 5px;
 	background: none;
 	border: none;
 }
 
 .clear-icon {
-	@extend .clear;
+	@extend %clear;
+
 	border: 1px solid var(--inverted-primary-color);
 	color: var(--inverted-primary-color);
 }
