@@ -1,0 +1,15 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	background-color: var(--inverted-bg-color);
+	width: 100%;
+	height: var(--navbar-h);
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}

@@ -1,0 +1,33 @@
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+%clear {
+	padding: 5px;
+	background: none;
+	border: none;
+}
+
+.clear-icon {
+	@extend %clear;
+
+	border: 1px solid var(--inverted-primary-color);
+	color: var(--inverted-primary-color);
+}
+
+.clear-icon > svg {
+	stroke: var(--inverted-primary-color);
+}
+
+.outline {
+	background: none;
+	border: 1px solid var(--primary-color);
+	border-radius: 4px;
+}
