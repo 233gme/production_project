@@ -22,6 +22,7 @@ export default [
       quotes: ['error', 'single'],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'i18next/no-literal-string': ['error', { markupOnly: true }],
+      'max-len': ['error', { code: 120, ignoreComments: true }],
     }
   }
 ];
