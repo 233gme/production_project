@@ -1,7 +1,8 @@
-import './styles/index.scss';
 import { AppRouter, useTheme } from 'app/providers';
 import { classNames } from 'shared';
 import { Navbar, Sitebar } from 'widgets';
+
+import './styles/index.scss';
 
 const App = () => {
 	const { theme } = useTheme();
